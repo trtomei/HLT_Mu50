@@ -1,5 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
+process = cms.Process('TEST')
+
 process.load('HLTrigger.PhaseII.Sequences.HLTBeginSequence_cff')
 process.load('HLTrigger.PhaseII.Filters.hltL1sSingleMu22or25_cfi')
 process.load('HLTrigger.PhaseII.Filters.hltPreMu50_cfi')
