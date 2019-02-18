@@ -1,0 +1,9 @@
+import FWCore.ParameterSet.Config as cms
+
+process.load('HLTrigger.PhaseII.Producers.hltIter0IterL3MuonPixelSeedsFromPixelTracks_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter0IterL3MuonCkfTrackCandidates_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter0IterL3MuonCtfWithMaterialTracks_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter0IterL3MuonTrackCutClassifier_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter0IterL3MuonTrackSelectionHighPurity_cfi')
+
+HLTIterativeTrackingIteration0ForIterL3Muon = cms.Sequence(process.hltIter0IterL3MuonPixelSeedsFromPixelTracks+process.hltIter0IterL3MuonCkfTrackCandidates+process.hltIter0IterL3MuonCtfWithMaterialTracks+process.hltIter0IterL3MuonTrackCutClassifier+process.hltIter0IterL3MuonTrackSelectionHighPurity)

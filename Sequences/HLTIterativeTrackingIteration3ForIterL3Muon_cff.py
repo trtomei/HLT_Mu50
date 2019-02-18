@@ -1,0 +1,16 @@
+import FWCore.ParameterSet.Config as cms
+
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonClustersRefRemoval_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonMaskedMeasurementTrackerEvent_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonPixelLayerPairs_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonL2Candidates_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonTrackingRegions_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonPixelClusterCheck_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonPixelHitDoublets_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonPixelSeeds_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonCkfTrackCandidates_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonCtfWithMaterialTracks_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonTrackCutClassifier_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonTrackSelectionHighPurity_cfi')
+
+HLTIterativeTrackingIteration3ForIterL3Muon = cms.Sequence(process.hltIter3IterL3MuonClustersRefRemoval+process.hltIter3IterL3MuonMaskedMeasurementTrackerEvent+process.hltIter3IterL3MuonPixelLayerPairs+process.hltIter3IterL3MuonL2Candidates+process.hltIter3IterL3MuonTrackingRegions+process.hltIter3IterL3MuonPixelClusterCheck+process.hltIter3IterL3MuonPixelHitDoublets+process.hltIter3IterL3MuonPixelSeeds+process.hltIter3IterL3MuonCkfTrackCandidates+process.hltIter3IterL3MuonCtfWithMaterialTracks+process.hltIter3IterL3MuonTrackCutClassifier+process.hltIter3IterL3MuonTrackSelectionHighPurity)

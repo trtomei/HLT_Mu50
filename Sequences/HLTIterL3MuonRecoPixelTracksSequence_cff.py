@@ -1,0 +1,11 @@
+import FWCore.ParameterSet.Config as cms
+
+process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonPixelTracksFilter_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonPixelTracksFitter_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonPixelTracksTrackingRegions_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonPixelLayerQuadruplets_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonPixelTracksHitDoublets_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonPixelTracksHitQuadruplets_cfi')
+process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonPixelTracks_cfi')
+
+HLTIterL3MuonRecoPixelTracksSequence = cms.Sequence(process.hltIterL3MuonPixelTracksFilter+process.hltIterL3MuonPixelTracksFitter+process.hltIterL3MuonPixelTracksTrackingRegions+process.hltIterL3MuonPixelLayerQuadruplets+process.hltIterL3MuonPixelTracksHitDoublets+process.hltIterL3MuonPixelTracksHitQuadruplets+process.hltIterL3MuonPixelTracks)

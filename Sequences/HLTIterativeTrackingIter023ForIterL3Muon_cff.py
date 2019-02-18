@@ -1,0 +1,9 @@
+import FWCore.ParameterSet.Config as cms
+
+process.load('HLTrigger.PhaseII.Sequences.HLTIterativeTrackingIteration0ForIterL3Muon_cff')
+process.load('HLTrigger.PhaseII.Sequences.HLTIterativeTrackingIteration2ForIterL3Muon_cff')
+process.load('HLTrigger.PhaseII.Producers.hltIter2IterL3MuonMerged_cfi')
+process.load('HLTrigger.PhaseII.Sequences.HLTIterativeTrackingIteration3ForIterL3Muon_cff')
+process.load('HLTrigger.PhaseII.Producers.hltIter3IterL3MuonMerged_cfi')
+
+HLTIterativeTrackingIter023ForIterL3Muon = cms.Sequence(process.HLTIterativeTrackingIteration0ForIterL3Muon+process.HLTIterativeTrackingIteration2ForIterL3Muon+process.hltIter2IterL3MuonMerged+process.HLTIterativeTrackingIteration3ForIterL3Muon+process.hltIter3IterL3MuonMerged)
