@@ -1,8 +1,8 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Producers.hltSiPixelDigis_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltSiPixelClusters_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltSiPixelClustersCache_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltSiPixelRecHits_cfi')
+from HLTrigger.PhaseII.Producers.hltSiPixelDigis_cfi import *
+from HLTrigger.PhaseII.Producers.hltSiPixelClusters_cfi import *
+from HLTrigger.PhaseII.Producers.hltSiPixelClustersCache_cfi import *
+from HLTrigger.PhaseII.Producers.hltSiPixelRecHits_cfi import *
 
-HLTDoLocalPixelSequence = cms.Sequence(process.hltSiPixelDigis+process.hltSiPixelClusters+process.hltSiPixelClustersCache+process.hltSiPixelRecHits)
+HLTDoLocalPixelSequence = cms.Sequence(hltSiPixelDigis+hltSiPixelClusters+hltSiPixelClustersCache+hltSiPixelRecHits)

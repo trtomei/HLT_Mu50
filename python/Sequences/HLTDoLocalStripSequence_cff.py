@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Producers.hltSiStripExcludedFEDListProducer_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltSiStripRawToClustersFacility_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltSiStripClusters_cfi')
+from HLTrigger.PhaseII.Producers.hltSiStripExcludedFEDListProducer_cfi import *
+from HLTrigger.PhaseII.Producers.hltSiStripRawToClustersFacility_cfi import *
+from HLTrigger.PhaseII.Producers.hltSiStripClusters_cfi import *
 
-HLTDoLocalStripSequence = cms.Sequence(process.hltSiStripExcludedFEDListProducer+process.hltSiStripRawToClustersFacility+process.hltSiStripClusters)
+HLTDoLocalStripSequence = cms.Sequence(hltSiStripExcludedFEDListProducer+hltSiStripRawToClustersFacility+hltSiStripClusters)

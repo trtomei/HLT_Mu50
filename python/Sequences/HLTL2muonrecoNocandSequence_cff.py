@@ -1,8 +1,8 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Sequences.HLTMuonLocalRecoSequence_cff')
-process.load('HLTrigger.PhaseII.Producers.hltL2OfflineMuonSeeds_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltL2MuonSeeds_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltL2Muons_cfi')
+from HLTrigger.PhaseII.Sequences.HLTMuonLocalRecoSequence_cff import *
+from HLTrigger.PhaseII.Producers.hltL2OfflineMuonSeeds_cfi import *
+from HLTrigger.PhaseII.Producers.hltL2MuonSeeds_cfi import *
+from HLTrigger.PhaseII.Producers.hltL2Muons_cfi import *
 
-HLTL2muonrecoNocandSequence = cms.Sequence(process.HLTMuonLocalRecoSequence+process.hltL2OfflineMuonSeeds+process.hltL2MuonSeeds+process.hltL2Muons)
+HLTL2muonrecoNocandSequence = cms.Sequence(HLTMuonLocalRecoSequence+hltL2OfflineMuonSeeds+hltL2MuonSeeds+hltL2Muons)

@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Sequences.HLTRecoPixelTracksSequenceForIterL3FromL1Muon_cff')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3FromL1MuonPixelVertices_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3FromL1MuonTrimmedPixelVertices_cfi')
+from HLTrigger.PhaseII.Sequences.HLTRecoPixelTracksSequenceForIterL3FromL1Muon_cff import *
+from HLTrigger.PhaseII.Producers.hltIterL3FromL1MuonPixelVertices_cfi import *
+from HLTrigger.PhaseII.Producers.hltIterL3FromL1MuonTrimmedPixelVertices_cfi import *
 
-HLTRecopixelvertexingSequenceForIterL3FromL1Muon = cms.Sequence(process.HLTRecoPixelTracksSequenceForIterL3FromL1Muon+process.hltIterL3FromL1MuonPixelVertices+process.hltIterL3FromL1MuonTrimmedPixelVertices)
+HLTRecopixelvertexingSequenceForIterL3FromL1Muon = cms.Sequence(HLTRecoPixelTracksSequenceForIterL3FromL1Muon+hltIterL3FromL1MuonPixelVertices+hltIterL3FromL1MuonTrimmedPixelVertices)

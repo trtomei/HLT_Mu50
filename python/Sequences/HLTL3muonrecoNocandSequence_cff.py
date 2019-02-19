@@ -1,12 +1,12 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Sequences.HLTIterL3muonTkCandidateSequence_cff')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonMerged_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonAndMuonFromL1Merged_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3GlbMuon_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonsNoID_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3Muons_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltL3MuonsIterL3Links_cfi')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonTracks_cfi')
+from HLTrigger.PhaseII.Sequences.HLTIterL3muonTkCandidateSequence_cff import *
+from HLTrigger.PhaseII.Producers.hltIterL3MuonMerged_cfi import *
+from HLTrigger.PhaseII.Producers.hltIterL3MuonAndMuonFromL1Merged_cfi import *
+from HLTrigger.PhaseII.Producers.hltIterL3GlbMuon_cfi import *
+from HLTrigger.PhaseII.Producers.hltIterL3MuonsNoID_cfi import *
+from HLTrigger.PhaseII.Producers.hltIterL3Muons_cfi import *
+from HLTrigger.PhaseII.Producers.hltL3MuonsIterL3Links_cfi import *
+from HLTrigger.PhaseII.Producers.hltIterL3MuonTracks_cfi import *
 
-HLTL3muonrecoNocandSequence = cms.Sequence(process.HLTIterL3muonTkCandidateSequence+process.hltIterL3MuonMerged+process.hltIterL3MuonAndMuonFromL1Merged+process.hltIterL3GlbMuon+process.hltIterL3MuonsNoID+process.hltIterL3Muons+process.hltL3MuonsIterL3Links+process.hltIterL3MuonTracks)
+HLTL3muonrecoNocandSequence = cms.Sequence(HLTIterL3muonTkCandidateSequence+hltIterL3MuonMerged+hltIterL3MuonAndMuonFromL1Merged+hltIterL3GlbMuon+hltIterL3MuonsNoID+hltIterL3Muons+hltL3MuonsIterL3Links+hltIterL3MuonTracks)

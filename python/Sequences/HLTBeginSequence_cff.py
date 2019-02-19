@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Filters.hltTriggerType_cfi')
-process.load('HLTrigger.PhaseII.Sequences.HLTL1UnpackerSequence_cff')
-process.load('HLTrigger.PhaseII.Sequences.HLTBeamSpot_cff')
+from HLTrigger.PhaseII.Filters.hltTriggerType_cfi import *
+from HLTrigger.PhaseII.Sequences.HLTL1UnpackerSequence_cff import *
+from HLTrigger.PhaseII.Sequences.HLTBeamSpot_cff import *
 
-HLTBeginSequence = cms.Sequence(process.hltTriggerType+process.HLTL1UnpackerSequence+process.HLTBeamSpot)
+HLTBeginSequence = cms.Sequence(hltTriggerType+HLTL1UnpackerSequence+HLTBeamSpot)

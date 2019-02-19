@@ -19,7 +19,6 @@ hltIterL3OITrackCandidates = cms.EDProducer("CkfTrackCandidateMaker",
     doSeedingRegionRebuilding = cms.bool(False),
     maxNSeeds = cms.uint32(500000),
     maxSeedsBeforeCleaning = cms.uint32(5000),
-    reverseTrajectories = cms.bool(True),
     src = cms.InputTag("hltIterL3OISeedsFromL2Muons"),
     useHitsSplitting = cms.bool(False)
 )

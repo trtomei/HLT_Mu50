@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Sequences.HLTRecopixelvertexingSequenceForIterL3FromL1Muon_cff')
-process.load('HLTrigger.PhaseII.Sequences.HLTIterativeTrackingIter023ForIterL3FromL1Muon_cff')
+from HLTrigger.PhaseII.Sequences.HLTRecopixelvertexingSequenceForIterL3FromL1Muon_cff import *
+from HLTrigger.PhaseII.Sequences.HLTIterativeTrackingIter023ForIterL3FromL1Muon_cff import *
 
-HLTIterL3IOmuonFromL1TkCandidateSequence = cms.Sequence(process.HLTRecopixelvertexingSequenceForIterL3FromL1Muon+process.HLTIterativeTrackingIter023ForIterL3FromL1Muon)
+HLTIterL3IOmuonFromL1TkCandidateSequence = cms.Sequence(HLTRecopixelvertexingSequenceForIterL3FromL1Muon+HLTIterativeTrackingIter023ForIterL3FromL1Muon)

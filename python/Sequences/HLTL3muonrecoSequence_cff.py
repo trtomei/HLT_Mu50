@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-process.load('HLTrigger.PhaseII.Sequences.HLTL3muonrecoNocandSequence_cff')
-process.load('HLTrigger.PhaseII.Producers.hltIterL3MuonCandidates_cfi')
+from HLTrigger.PhaseII.Sequences.HLTL3muonrecoNocandSequence_cff import *
+from HLTrigger.PhaseII.Producers.hltIterL3MuonCandidates_cfi import *
 
-HLTL3muonrecoSequence = cms.Sequence(process.HLTL3muonrecoNocandSequence+process.hltIterL3MuonCandidates)
+HLTL3muonrecoSequence = cms.Sequence(HLTL3muonrecoNocandSequence+hltIterL3MuonCandidates)
